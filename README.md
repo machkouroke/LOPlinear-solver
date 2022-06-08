@@ -3,9 +3,6 @@ LOPLinear-Solver
 
 Script python permettant de résoudre des systèmes linéaires 
 
-![image](https://user-images.githubusercontent.com/40785379/172662821-a66737b2-3e97-477e-bede-b219eb45c91a.png)
-
-<a href="https://buymeacoffee.com/machkouroke" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 
 ## Caractéristique
