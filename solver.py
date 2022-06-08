@@ -1,5 +1,7 @@
 import argparse
+import os
 
+os.chdir("input")
 # Arg for command line
 parser = argparse.ArgumentParser()
 for arg in {'--infile', '--outfile'}:
@@ -10,14 +12,11 @@ args = parser.parse_args()
 # This function returns a correct display for the complex number
 def complex_printer(number):
     comp = complex(number)
-    if comp.real != 0 and comp.imag != 0:
-        return complex(round(comp.real, 4), round(comp.imag, 4))
-    if comp.real != 0 and comp.imag == 0:
+    if comp.real != 0:
+        if comp.imag != 0:
+            return complex(round(comp.real, 4), round(comp.imag, 4))
         return comp.real
-    if comp.real == 0 and comp.imag != 0:
-        return complex(0, round(comp.imag, 4))
-    else:
-        return 0
+    return complex(0, round(comp.imag, 4)) if comp.imag != 0 else 0
 
 
 # x+ay = 0 -> a = -(x / y)
@@ -175,13 +174,12 @@ class SystemLinear:
                 return 'Infinitely many solutions'
 
 
-with open(args.infile, 'r') as infile, \
-        open(args.outfile, 'w') as outfile:
+with open(args.infile, 'r') as infile, open(args.outfile, 'w') as outfile:
     contents = []
     # We read the content in in.txt
     for q in infile:
         if q[-1] == '\n':
-            contents.append(q[:len(q) - 1].split())
+            contents.append(q[:-1].split())
         else:
             contents.append(q.split())
     # we turn the string content into float
