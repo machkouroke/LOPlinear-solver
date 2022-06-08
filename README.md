@@ -11,8 +11,6 @@ Script python permettant de résoudre des systèmes linéaires
 - Enrégistre les résultat dans un script
 
 
----
-
 ## Utilisation
 - Ecrire votre système dans un fichier (de préférence dans le dossier input). Ce fichier réprésente le système comme suit
 ```
